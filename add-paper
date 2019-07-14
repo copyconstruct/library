@@ -1,0 +1,24 @@
+#!/bin/bash
+set -ex
+
+function main() {
+	if [[ "$#" -ne 3 ]]; then
+		echo "Usage add-paper paper-name link-to-paper repo"
+		exit 1
+	fi
+	local paperName=$1
+	local paperLink=$2
+	local paperRepo=$3
+
+	if ! [[ -d "${paperRepo}" ]]; then
+		echo "Repo ${paperRepo} does not exist."
+		exit 1
+	fi
+
+	local paperPath="${PWD}/${paperRepo}/Papers/${paperName}.pdf"
+	curl "${paperLink}" -o "${paperPath}"
+	echo "${paperLink} downloaded to ${paperPath}"
+	
+}
+
+main "$@"
