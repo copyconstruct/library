@@ -1,0 +1,20 @@
+#!/bin/bash
+
+function main() {
+	local repoName=$1
+	if [[ -z "${repoName}" ]]; then
+		echo "Usage init-repo repoName"
+		exit 1
+	fi
+
+	if [[ -d "${repoName}" ]]; then
+		echo "Repo ${repoName} already exists."
+		exit 1
+	fi
+
+	mkdir "${repoName}"
+	(cd "${repoName}" && touch Talks.md Papers.md Articlees.md && mkdir Talks Articles Papers)
+	echo "Created skeleton for ${repoName}"
+}
+
+main "$@"
