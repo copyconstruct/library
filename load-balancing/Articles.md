@@ -7,4 +7,4 @@
 5. [Open-sourcing Katran, a scalable network load balancer](https://code.fb.com/open-source/open-sourcing-katran-a-scalable-network-load-balancer/)
 6. [Building Services at Airbnb,, Part 3](https://medium.com/airbnb-engineering/building-services-at-airbnb-part-3-ac6d4972fc2d)
 7. [Introduction to modern network load balancing and proxying](https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236)
-8. 
+8. [Meet Bandaid, the Dropbox service proxy](https://blogs.dropbox.com/tech/2018/03/meet-bandaid-the-dropbox-service-proxy/)
